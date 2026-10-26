@@ -268,7 +268,6 @@ function sourceIdsFromIndexes(indexes = [], sources = []) {
 
 module.exports = {
   buildResearchQuality,
-  compactSource,
   needsMoreEvidence,
   normalizeEvidence,
   resolveSources,

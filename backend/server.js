@@ -38,7 +38,6 @@ function sleep(ms) {
 
 function withTimeout(promise, ms, fallback, label = 'task') {
   let timeoutId;
-  let timedOut = false;
   return Promise.race([
     Promise.resolve(promise).catch((err) => {
       console.error(`[${label}] failed:`, err && err.message ? err.message : err);
@@ -46,16 +45,12 @@ function withTimeout(promise, ms, fallback, label = 'task') {
     }),
     new Promise((resolve) => {
       timeoutId = setTimeout(() => {
-        timedOut = true;
         console.error(`[${label}] timed out after ${ms}ms`);
         resolve(fallback);
       }, ms);
     }),
   ]).finally(() => {
     clearTimeout(timeoutId);
-    if (!timedOut) {
-      // success path - nothing to log
-    }
   });
 }
 
