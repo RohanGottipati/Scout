@@ -357,6 +357,5 @@ module.exports = {
   storeIdeaResult,
   queryAdjacentIdeas,
   getGraphStats,
-  ensureAssistantId,
   sendBackboardMessage,
 };

@@ -611,5 +611,4 @@ module.exports = {
   getDemoBuildPlan,
   getDemoSearchResult,
   isDemoIdea,
-  normalizeIdea,
 };

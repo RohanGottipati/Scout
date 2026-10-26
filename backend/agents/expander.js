@@ -46,4 +46,4 @@ Generate search angles that will uncover previous attempts, live competitors, re
   }
 }
 
-module.exports = { fallbackExpansion, runExpander };
+module.exports = { runExpander };
